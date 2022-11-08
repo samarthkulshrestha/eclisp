@@ -1,17 +1,18 @@
 #include <stdio.h>
+#include <stdlib.h>
 
+#include <editline/readline.h>
 
-// declare a buffer for input size of 2048 bytes
-static char input[2048];
 
 int main(int argc, char** argv) {
     puts("eclisp version 0.1.0");
     puts("press ctrl+c to exit.\n");
 
     while (1) {
-        fputs("ecl> ", stdout);
-        fgets(input, 2048, stdin);
-        printf("no! you're a %s", input);
+        char* input = readline("eclisp> ");
+        add_history(input);
+        printf("no! you're a %s\n", input);
+        free(input);
     }
 
     return 0;
