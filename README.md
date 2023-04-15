@@ -16,6 +16,9 @@ samarth kulshrestha
 </div>
 
 ## Introduction
+
+<img src="assets/xkcd_eclipse.png" align="right"/>
+
 **Eclisp** is a [Lisp](https://en.wikipedia.org/wiki/LISP) dialect that focuses on minimalism, simplicity, and clarity. Its design decisions are guided by the following mantras:
 
 + **Need for speed.** Performace is a priority.
