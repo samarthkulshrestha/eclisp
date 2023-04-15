@@ -21,10 +21,10 @@ samarth kulshrestha
 
 **Eclisp** is a [Lisp](https://en.wikipedia.org/wiki/LISP) dialect that focuses on minimalism, simplicity, and clarity. Its design decisions are guided by the following mantras:
 
-+ **Need for speed.** Performace is a priority.
-+ **Close to metal.** There is less between you vanilla Lisp by design. That means less to work around when you tinker.
++ **Need for speed.** Performance is a priority.
++ **Close to metal.** There is less between you and vanilla Lisp by design. That means less to work around when you tinker.
 + **Different is good.** Eclisp occasionally deviates from the original Lisp in favour of building a better, more modern language.
-+ **The smaller the better.** With the binary coming in at `121kb`, and only about a thousand lines of code, Eclisp's core is tiny, without compromising on delivering full-fleged, functional programming language.
++ **The smaller the better.** With the binary coming in at `121kb`, and only about a thousand lines of code, Eclisp's core is tiny, without compromising on delivering a full-fledged, functional programming language.
 
 ## Prerequisites
 
@@ -33,7 +33,70 @@ samarth kulshrestha
 
 ## Install
 
+Only GNU/Linux systems are supported.
+
+#### language core
+
++ clone the repository
 ```
 git clone https://github.com/samarthkulshrestha/eclisp.git ~/.eclisp
-~/.eclisp/install
 ```
+
++ compile the code
+```
+cd ~/.eclisp/src
+cc -std=c99 -Wall eclisp.c lib/mpc.c -ledit -lm -o eclisp
+```
+
++ make sure the binary is executable
+```
+chmod +x ./eclisp
+```
+
++ move the binary to somewhere in your shell's $PATH
+```
+mv ./eclisp ~/.local/bin/
+```
+
+#### standard library
+
++ move the standard library file to library location
+```
+cd ~/.eclisp/src
+sudo cp std.eclp /lib/
+```
+
++ set the environment variable for stdlib's location. add the following line to
+  your shell's configuration file (`.bashrc` or `.zshrc`).
+```
+export ECLISP_ROOT="/lib"
+```
+
+## Run
+
++ running `eclisp` in the terminal launches the interactive prompt
+```
+eclisp version 1.1.15
+author: samarth kulshrestha
+
+eclisp λ
+-> 
+```
+
++ files can be executed by running
+```
+eclisp <filename.elcp>
+```
+
+## Contribute
+
+ [![pull requests welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
+ [![c style guide](https://img.shields.io/badge/c-style%20guide-blue?style=for-the-badge)](https://cs50.readthedocs.io/style/c/)
+
++ I <3 pull requests and bug reports!
++ Don't hesitate to [tell me my code-fu sucks](https://github.com/samarthkulshrestha/eclisp/issues/new), but please tell me why.
+
+## License
+
+Eclisp is licensed under the MIT License.
+Copyright (c) 2023 Samarth Kulshrestha.
