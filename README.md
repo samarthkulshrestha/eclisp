@@ -17,7 +17,8 @@ samarth kulshrestha
 
 ## Introduction
 
-<img src="assets/xkcd_eclipse.png" align="right"/>
+<img src="assets/xkcd_eclipse.png" align="right" />
+<br />
 
 **Eclisp** is a [Lisp](https://en.wikipedia.org/wiki/LISP) dialect that focuses on minimalism, simplicity, and clarity. Its design decisions are guided by the following mantras:
 
@@ -25,3 +26,15 @@ samarth kulshrestha
 + **Close to metal.** There is less between you vanilla Lisp by design. That means less to work around when you tinker.
 + **Different is good.** Eclisp occasionally deviates from the original Lisp in favour of building a better, more modern language.
 + **The smaller the better.** With the binary coming in at `121kb`, and only about a thousand lines of code, Eclisp's core is tiny, without compromising on delivering full-fleged, functional programming language.
+
+## Prerequisites
+
++ a C compiler (*GNU C Compiler v12.2+ is recommended*)
++ Git v2.23+
+
+## Install
+
+```
+git clone https://github.com/samarthkulshrestha/eclisp.git ~/.eclisp
+~/.eclisp/install
+```
