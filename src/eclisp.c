@@ -926,7 +926,7 @@ int main(int argc, char** argv) {
     free(stdpath); lval_del(j);
 
     if (argc == 1) {
-        puts("eclisp version 0.1.15");
+        puts("eclisp version 1.1.15");
         puts("author: samarth kulshrestha");
 
         while (1) {
