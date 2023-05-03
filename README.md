@@ -99,4 +99,5 @@ eclisp <filename.elcp>
 ## License
 
 Eclisp is licensed under the MIT License.
+
 Copyright (c) 2023 Samarth Kulshrestha.
