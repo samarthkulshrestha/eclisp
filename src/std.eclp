@@ -1,7 +1,7 @@
 ; atoms
 (def {nil} {})
 (def {true} 1)
-{def {false} 0}
+(def {false} 0)
 
 ; func defs
 (def {fun} (\ {f b} {
